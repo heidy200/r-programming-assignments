@@ -1,5 +1,4 @@
 # r-programming-assignments
-Repository for R Programming Assignments
 
 # Heidy Lopez
 
