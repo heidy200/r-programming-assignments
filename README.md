@@ -3,7 +3,7 @@ Repository for R Programming Assignments
 
 # Heidy Lopez
 
-**Course Number:** LIS4317
+LIS4317
 
-**Description:** Repository for R Programming Assignments
+Repository for R Programming Assignments
 
