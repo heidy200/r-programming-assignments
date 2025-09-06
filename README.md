@@ -8,9 +8,7 @@ Repository for R Programming Assignments
 
 # Assignment 2: Testing `myMean` Function
 
-**Test Result**
-
-Code inR:
+**Code in R:**
 
 **Test Vector**
 
@@ -35,4 +33,5 @@ myMean <- function(assignment2) {
 }
 
 myMean(assignment2)
+
 #Output: 19.25
