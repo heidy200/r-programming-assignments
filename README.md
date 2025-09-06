@@ -6,7 +6,7 @@ LIS4317
 
 Repository for R Programming Assignments
 
-# Assignment 2: Testing `myMean` Function
+# Module 2: Testing `myMean` Function
 
 **Code in R:**
 
