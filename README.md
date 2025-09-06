@@ -45,3 +45,14 @@ myMean(assignment2)
 ```r
 [1] 19.25
 ```
+
+***Error Explained***
+The original myMean function caused an error because it referred to variables named assignment and someData, which were not defined. The function's input parameter assignment2 was not used inside the function. After updating the code to consistently use assignment2, the function correctly calculates and returns the mean of the input vector.
+
+
+
+
+
+
+**Blog Post**
+https://heidy204462e4947b-geaoc.wordpress.com/2025/09/05/module-2-testing-mymean-function/
