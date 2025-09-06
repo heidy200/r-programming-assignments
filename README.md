@@ -32,7 +32,7 @@ Error in myMean(assignment2) : object 'assignment' not found
 
 **Corrected Function:**
 
-``r
+```r
 myMean <- function(assignment2) {
   return(sum(assignment2) / length(assignment2))
 }
