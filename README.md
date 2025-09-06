@@ -28,7 +28,9 @@ myMean(assignment2)
 
 **Error Message**
 
+```r
 Error in myMean(assignment2) : object 'assignment' not found
+```r
 
 **Corrected Function:**
 
@@ -40,4 +42,6 @@ myMean <- function(assignment2) {
 myMean(assignment2)
 ```
 
-#Output: 19.25
+```r
+[1] 19.25
+```
