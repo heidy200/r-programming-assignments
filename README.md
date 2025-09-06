@@ -12,7 +12,7 @@ Repository for R Programming Assignments
 
 Code inR:
 
-**Test Vector***
+**Test Vector**
 
 assignment2 <- c(16, 18, 14, 22, 27, 17, 19, 17, 17, 22, 20, 22)
 
