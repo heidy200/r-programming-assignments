@@ -30,7 +30,7 @@ myMean(assignment2)
 
 ```r
 Error in myMean(assignment2) : object 'assignment' not found
-```r
+```
 
 **Corrected Function:**
 
