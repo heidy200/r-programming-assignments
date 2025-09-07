@@ -32,7 +32,7 @@ myMean(assignment2)
 Error in myMean(assignment2) : object 'assignment' not found
 ```
 
-**Corrected Function:**
+**Corrected Function**
 
 ```r
 myMean <- function(assignment2) {
