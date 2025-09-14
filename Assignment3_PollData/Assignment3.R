@@ -12,9 +12,15 @@ df_polls <- data.frame(Name, ABC_poll, CBS_poll)
 str(df_polls)
 head(df_polls)
 
-# Summary statistics
+# Mean
 mean(df_polls$ABC_poll)
+mean(df_polls$CBS_poll)
+
+# Median
+median(df_polls$ABC_poll)
 median(df_polls$CBS_poll)
+
+# Range
 range(df_polls[, c("ABC_poll", "CBS_poll")])
 
 # Add difference column
