@@ -1,4 +1,4 @@
-# Assignment 01 – Basic Functions
+# Assignment 03 – Poll Data
 
 ## Description
 This script defines polling data for seven candidates, combines it into a data frame, inspects the structure, and computes summary statistics. It also adds a column showing the difference between CBS and ABC poll results.
