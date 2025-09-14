@@ -1,0 +1,20 @@
+# Assignment 03 – Statistics
+
+## Description
+This script defines poll data for seven political candidates and computes summary statistics including mean, median, and range. It also adds a column showing the difference between CBS and ABC poll results.
+
+## How to Run
+1. Open `Assignment_03.R` in RStudio.
+2. Run all lines or source the script.
+3. Outputs (summary statistics and updated data frame) will appear in the console.
+
+## Packages
+No additional packages are required.
+
+## Data
+- Source: Hypothetical poll data provided in assignment instructions.
+- Location: Included directly in the script.
+
+## Notes
+- Difference column is CBS minus ABC.
+- No missing data; all vectors have equal length.
