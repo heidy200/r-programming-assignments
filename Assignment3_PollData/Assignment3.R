@@ -1,4 +1,4 @@
-# Assignment_01.R
+# Assignment3.R
 
 # Define vectors
 Name <- c("Jeb", "Donald", "Ted", "Marco", "Carly", "Hillary", "Bernie")
