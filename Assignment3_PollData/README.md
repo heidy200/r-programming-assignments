@@ -5,7 +5,7 @@ This script defines polling data for seven candidates, combines it into a data f
 
 ## How to Run
 1. Open `Assignment03.R` in RStudio  
-2. Run all lines or source the script  
+2. Run all lines  
 3. View outputs in the console
 
 ## Packages
