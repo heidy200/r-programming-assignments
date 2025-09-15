@@ -14,3 +14,5 @@ No external packages required
 ## Notes
 Make sure your working directory is set to the folder containing the script.
 
+## Blog Post
+https://heidy204462e4947b-geaoc.wordpress.com/2025/09/11/assignment-3-analyzing-2016-data-poll-data-in-r/
