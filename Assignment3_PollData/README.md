@@ -4,6 +4,6 @@
 This script defines polling data for seven candidates, combines it into a data frame, inspects the structure, and computes summary statistics. It also adds a column showing the difference between CBS and ABC poll results.
 
 ## Blog Post Reflection
-The linked blog provides an in depth reflection of this assignment hihglighting patterns and limitations.
+The linked blog provides an in depth reflection of this assignment highlighting patterns and limitations.
 
 https://heidy204462e4947b-geaoc.wordpress.com/2025/09/11/assignment-3-analyzing-2016-data-poll-data-in-r/
