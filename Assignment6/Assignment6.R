@@ -14,7 +14,7 @@ A_minus_B
 D <- diag(c(4, 1, 2, 3))
 D
 
-# Create diagonal
+# Create a 5×5 diagonal matrix
 diag_part <- diag(3, 5)
 
 # Create first column
