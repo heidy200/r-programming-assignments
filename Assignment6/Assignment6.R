@@ -17,14 +17,16 @@ D
 # Create a 5×5 diagonal matrix
 diag_part <- diag(3, 5)
 
-# Create first column
+# Create the first column
 col1 <- c(3, rep(2, 4))
 
-# Create second row onward
-custom_matrix <- diag_part
-custom_matrix[1, 2:5] <- 1
-custom_matrix[2:5, 1] <- 2
+# Create the first row 
+row1 <- c(3, rep(1, 4))
 
-# Replace first column
+# Modify the diagonal matrix 
+custom_matrix <- diag_part
 custom_matrix[,1] <- col1
+custom_matrix[1,] <- row1
+
+# Display the result
 custom_matrix
