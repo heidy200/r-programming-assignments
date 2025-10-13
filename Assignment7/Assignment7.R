@@ -15,11 +15,14 @@ s3_obj <- list(name = "Myself", age = 29, GPA = 3.5)
 class(s3_obj) <- "student_s3"
 
 # Define a custom print method for the S3 class
-print.student_s3 <- function(x) {
-  cat("S3 Student Object:\n")
-  cat("Name:", x$name, "\nAge:", x$age, "\nGPA:", x$GPA, "\n")
+print.student_s3 <- function(obj) {
+  print(paste("Student Name:", obj$name))
+  print(paste("Age:", obj$age))
+  print(paste("GPA:", obj$GPA))
 }
+
 print(s3_obj)
+summary(s3_obj) # To show differences between S3 and S4
 
 # Define an S4 class
 setClass("student_s4",
@@ -33,9 +36,11 @@ setGeneric("print", function(x, ...) standardGeneric("print"))
 
 # Define a method for the student_s4 class
 setMethod("print", "student_s4", function(x) {
-  cat("Student Name:", x@name, "\n")
-  cat("Age:", x@age, "\n")
-  cat("GPA:", x@GPA, "\n")
+  print(paste("Student Name:", x@name))
+  print(paste("Age:", x@age))
+  print(paste("GPA:", x@GPA))
 })
 
-s4_obj
+print(s4_obj)
+summary(s4_obj) # To show differences between S3 and S4
+
