@@ -38,3 +38,9 @@ write.csv(
   file      = "i_students_full.csv",
   row.names = FALSE
 )
+
+# Confirm files exist
+file.exists("gender_mean.txt")
+file.exists("i_students.csv")
+file.exists("i_students_full.csv")
+
