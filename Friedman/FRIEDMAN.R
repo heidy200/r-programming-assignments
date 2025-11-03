@@ -1,0 +1,5 @@
+install.packages("devtools")
+library(devtools)
+create("Friedman")
+check("Friedman")
+build("Friedman")
