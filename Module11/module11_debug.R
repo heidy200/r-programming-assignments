@@ -1,3 +1,4 @@
+# Orignal code
 tukey_multiple <- function(x) {
   outliers <- array(TRUE, dim = dim(x))
   for (j in 1:ncol(x)) {
@@ -14,39 +15,32 @@ set.seed(123)
 test_mat <- matrix(rnorm(50), nrow = 10)
 tukey_multiple(test_mat)
 
+# Helper function: Tukey outlier rule
+tukey.outlier <- function(x) {
+  q1 <- quantile(x, 0.25, na.rm = TRUE)
+  q3 <- quantile(x, 0.75, na.rm = TRUE)
+  iqr <- q3 - q1
+  x < (q1 - 1.5 * iqr) | x > (q3 + 1.5 * iqr)
+}
 
-# Defensive, corrected, and self-contained Tukey multiple outlier function
+# Corrected function with defensive checks
 corrected_tukey <- function(x) {
-  # Defensive checks
-  if (!is.matrix(x)) {
-    stop("Error: Input must be a matrix.")
-  }
-  if (!is.numeric(x)) {
-    stop("Error: Matrix must contain only numeric values.")
-  }
-  if (nrow(x) == 0 || ncol(x) == 0) {
-    stop("Error: Matrix cannot be empty.")
-  }
+  if (!is.matrix(x)) stop("Input must be a matrix.")
+  if (!is.numeric(x)) stop("Matrix must contain only numeric values.")
   
-  # Initialize logical array
   outliers <- array(TRUE, dim = dim(x))
-  
-  # Apply Tukey rule for each column
   for (j in seq_len(ncol(x))) {
-    qnt <- quantile(x[, j], probs = c(0.25, 0.75))
-    H <- 1.5 * IQR(x[, j])
-    col_outliers <- (x[, j] < (qnt[1] - H)) | (x[, j] > (qnt[2] + H))
-    outliers[, j] <- outliers[, j] & col_outliers
+    outliers[, j] <- outliers[, j] & tukey.outlier(x[, j])
   }
   
-  # Check for rows that are outliers in all columns
-  outlier.vec <- apply(outliers, 1, all)
+  outlier.vec <- logical(nrow(x))
+  for (i in seq_len(nrow(x))) {
+    outlier.vec[i] <- all(outliers[i, ])
+  }
   
   return(outlier.vec)
 }
 
-# Test the function
 set.seed(123)
 test_mat <- matrix(rnorm(50), nrow = 10)
-corrected_tukey(test_mat)
-
+print(corrected_tukey(test_mat))
