@@ -26,7 +26,7 @@ install.packages(c("dplyr", "lubridate", "ggplot2", "tidyr", "readr"))
 ```
 
 ## Dataset
-This package uses the CDC’s “Monthly Provisional Counts of Deaths by Select Causes” dataset. Download the CSV from the data-raw folder and save it in:
+This package uses the CDC’s “Monthly Provisional Counts of Deaths by Select Causes” dataset. Download the CSV from the data-raw folder or https://data.cdc.gov/National-Center-for-Health-Statistics/Monthly-Provisional-Counts-of-Deaths-by-Select-Cau/9dzk-mvmi/about_data and save it in:
 
 ```
 healthTrends/data-raw/
