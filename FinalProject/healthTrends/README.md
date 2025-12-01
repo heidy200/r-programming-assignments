@@ -2,7 +2,7 @@
 Exploring Heart Disease, Respiratory Illness, and COVID-19 Mortality Trends
 
 ## Overview
-`healthTrends` is an R package I created to explore monthly CDC mortality data for heart disease, chronic lower respiratory diseases, and COVID-19. The package includes functions that clean the data, summarize yearly trends, and create visualizations that make it easier to see how these causes of death have changed over time. I developed this package as part of a course project on health data analysis and R package development.
+`healthTrends` is an R package I created to explore monthly CDC mortality data for heart disease, chronic lower respiratory diseases, and COVID-19. The package includes functions that clean the data, summarize yearly trends, and create visualizations that make it easier to see how these causes of death have changed over time. I developed this package as part of a course project to showcase skills learned.
 
 ## Key Features
 ✔ Cleans and prepares CDC mortality data  
