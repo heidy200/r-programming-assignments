@@ -55,28 +55,6 @@ Creates a line plot for a selected cause (`"heart"`, `"respiratory"`, or `"covid
 ### `plot_trends_all(df)`
 Creates a combined line plot showing all three causes on one graph.
 
-## Example Workflow
-
-```r
-# Load data
-raw_df <- readr::read_csv("data-raw/cdc_monthly_deaths.csv")
-
-# Clean data
-cleaned <- clean_health_data(raw_df)
-
-# Summaries
-summary_obj <- summarize_causes(cleaned)
-summary_obj           
-summary(summary_obj)  
-
-# Visualizations
-plot_trends(cleaned, "heart")
-plot_trends(cleaned, "respiratory")
-plot_trends(cleaned, "covid")
-
-# Combined plot
-plot_trends_all(cleaned)
-```
 
 ## S3 Methods
 This package includes custom S3 methods for:
