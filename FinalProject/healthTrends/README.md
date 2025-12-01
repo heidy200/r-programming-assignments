@@ -1,15 +1,15 @@
-# healthTrends 📊  
+# healthTrends  
 Exploring Heart Disease, Respiratory Illness, and COVID-19 Mortality Trends
 
 ## Overview
 `healthTrends` is an R package I created to explore monthly CDC mortality data for heart disease, chronic lower respiratory diseases, and COVID-19. The package includes functions that clean the data, summarize yearly trends, and create visualizations that make it easier to see how these causes of death have changed over time. I developed this package as part of a course project to showcase skills learned.
 
 ## Key Features
-✔ Cleans and prepares CDC mortality data  
-✔ Summarizes deaths by year and cause  
-✔ Custom S3 print and summary methods  
-✔ Single-cause trend plots  
-✔ Combined trend plots for all three causes  
+- Cleans and prepares CDC mortality data  
+- Summarizes deaths by year and cause  
+- Custom S3 print and summary methods  
+- Single-cause trend plots  
+- Combined trend plots for all three causes  
 
 ## Installation
 To load the package from your project directory while developing, use:
@@ -82,8 +82,6 @@ plot_trends_all(cleaned)
 This package includes custom S3 methods for:
 - `print.health_summary`
 - `summary.health_summary`
-
-These methods format the summary output in a cleaner, more readable way.
 
 ## License
 MIT License  
