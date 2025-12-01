@@ -1,0 +1,119 @@
+---
+title: "healthtrends_vignette"
+output: html_document
+---
+
+---
+title: "Using the healthTrends Package"
+author: "Heidy Lopez"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{healthTrends Vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Introduction
+
+The `healthTrends` package was created to explore monthly CDC mortality data for heart disease, respiratory diseases, and COVID-19. The package includes functions that clean the dataset, summarize yearly totals, and generate visualizations that make it easier to understand how these causes of death have changed over time.
+
+This vignette walks through a typical workflow using the package.
+
+# Loading the Package
+
+```r
+library(healthTrends)
+library(readr)
+library(dplyr)
+library(ggplot2)
+```
+
+# Importing the Dataset
+
+Before using the package, download the CDC dataset and save it in:
+
+```
+healthTrends/data-raw/cdc_monthly_deaths.csv
+```
+
+Load the dataset like this:
+
+```r
+raw_df <- read_csv("data-raw/cdc_monthly_deaths.csv")
+```
+
+# Cleaning the Data
+
+The `clean_health_data()` function prepares and standardizes the dataset:
+
+```r
+cleaned <- clean_health_data(raw_df)
+head(cleaned)
+```
+
+This creates the cleaned columns:
+
+- `date`
+- `year`
+- `month`
+- `heart`
+- `respiratory`
+- `covid`
+
+# Summarizing Mortality Trends
+
+You can summarize yearly totals using:
+
+```r
+summary_obj <- summarize_causes(cleaned)
+summary_obj
+summary(summary_obj)
+```
+
+These use custom S3 print and summary methods to display formatted results.
+
+# Visualizing Trends
+
+## Single-Cause Plot
+
+```r
+plot_trends(cleaned, "heart")
+```
+
+Other options:
+
+```r
+plot_trends(cleaned, "respiratory")
+plot_trends(cleaned, "covid")
+```
+
+## Combined Cause Plot
+
+```r
+plot_trends_all(cleaned)
+```
+
+This creates a multi-line visualization showing all three causes.
+
+# Full Workflow Example
+
+```r
+# Load data
+raw_df <- read_csv("data-raw/cdc_monthly_deaths.csv")
+
+# Clean
+cleaned <- clean_health_data(raw_df)
+
+# Summaries
+summary_obj <- summarize_causes(cleaned)
+summary(summary_obj)
+
+# Plots
+plot_trends(cleaned, "heart")
+plot_trends_all(cleaned)
+```
+
+# Conclusion
+
+The `healthTrends` package simplifies the process of cleaning, summarizing, and visualizing major U.S. mortality trends. It provides a clear workflow for exploring heart disease, respiratory disease, and COVID-19 using official CDC data.
+

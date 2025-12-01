@@ -1,0 +1,24 @@
+Package: healthTrends
+Title: Tools for Exploring Heart, Respiratory, and COVID-19 Mortality Trends
+Version: 0.0.0.9000
+Authors@R: 
+    person("Heidy", "Lopez", email = "heidy20@usf.edu", role = c("aut", "cre"))
+Description:  Provides helper functions to clean, summarize, and visualize 
+    health mortality data for heart disease, respiratory disease, and 
+    COVID-19 using monthly counts from CDC provisional datasets. Includes 
+    functions for data cleaning, yearly summaries, and basic time-series plots.
+License:  MIT + file LICENSE
+LazyData: true
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends: R (>= 4.0.0)
+Imports:
+    dplyr,
+    ggplot2,
+    lubridate
+Suggests:
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+URL: https://github.com/heidy200/r-programming-assignments
